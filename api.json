@@ -27,23 +27,7 @@
         "summary": "Get Test",
         "description": "Test",
         "tags": ["test"],
-        "parameters": [
-          {
-            "name": "testParameter",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Test successfully retrieved.",
