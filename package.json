@@ -1,0 +1,14 @@
+{
+  "name": "openapi-typescript-fetch-one-of",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "openapi-generator-cli generate -i ./api.json -o src/generated -g typescript-fetch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.2"
+  }
+}

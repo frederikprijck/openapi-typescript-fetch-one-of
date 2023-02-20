@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "OneOf Example",
+    "description": "An example file showing using OneOf.",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "test": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "description": "Test Url(s).",
+            "oneOf": [
+              { "type": "array", "items": { "type": "string" } },
+              { "type": "string" }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/test": {
+      "get": {
+        "summary": "Get Test",
+        "description": "Test",
+        "tags": ["test"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Test successfully retrieved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/test" }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_test"
+      }
+    }
+  }
+}
